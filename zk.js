@@ -43,28 +43,28 @@ zk.cookie = function(key, value){
 zk.bs 	= {};
 //默认选项
 zk.bs.modaloptions = {
-	id		: 'basemodal',//模态框id
-	url 	: '',
-	fade	: 'fade',//动画效果 淡入淡出
-	close	: true,//右上角关闭按钮
-	head	: true,
-	title	: 'title',//必须head为true,才会显示title
-	foot	: true,//是否显示确定按钮  false则按钮都不显示
-	btn		: false,//是否显示取消按钮  默认不显示 
-	okbtn	: '确定',
+	id: 'basemodal',//模态框id
+	url : '',
+	fade: 'fade',//动画效果 淡入淡出
+	close: true,//右上角关闭按钮
+	head: true,
+	title: 'title',//必须head为true,才会显示title
+	foot: true,//是否显示确定按钮  false则按钮都不显示
+	btn: false,//是否显示取消按钮  默认不显示 
+	okbtn: '确定',
 	obbtnclass:'btn-primary',//确定按钮 默认样式 为bootstrap的btn-primary
 	obbtnstyle:'',//确定按钮 自定义 行内样式
-	clbtn	: '取消',
+	clbtn: '取消',
 	clbtnclass:'btn-default',//取消按钮 默认样式 为bootstrap的btn-default
 	clbtnstyle:'',//取消按钮 自定义 行内样式
-	msg		: 'msg',
-	isbig	: false,//大模态框、小模态框  默认为小模态框
-	show	: false,
-	remote	: false,//如果提供的是 URL，将利用 jQuery 的 load 方法从此 URL 地址加载要展示的内容（只加载一次）并插入 .modal-content 内。如果使用的是 data 属性 API，还可以利用 href 属性指定内容来源地址。
+	msg: 'msg',
+	isbig: false,//大模态框、小模态框  默认为小模态框
+	show: false,
+	remote: false,//如果提供的是 URL，将利用 jQuery 的 load 方法从此 URL 地址加载要展示的内容（只加载一次）并插入 .modal-content 内。如果使用的是 data 属性 API，还可以利用 href 属性指定内容来源地址。
 	backdrop: 'static',//遮罩层
 	keyboard: true,//键盘上的 esc 键被按下时  关闭模态框。
-	style	: '',//modal 自定义样式
-	mstyle	: '',//模态框自定义样式
+	style: '',//modal 自定义样式
+	mstyle: '',//模态框自定义样式
 	callback: null
 };
 zk.bs.modalstr = function(opt){
@@ -225,10 +225,10 @@ zk.bs.dialog = function(options, okcallback){
  *4.msg
  */
 zk.bs.msgoptions = {
-	msg  : 'msg', //内容
-	style : 'info',//颜色  default  primary success info warning danger
-	time : 2000,//毫秒 多长时间后自动消失
-	position : 'top',//位置  top bottom
+	msg : 'msg', //内容
+	style: 'info',//颜色  default  primary success info warning danger
+	time: 2000,//毫秒 多长时间后自动消失
+	position: 'top',//位置  top bottom
 };
 zk.bs.msgstr = function(msg, style, position){
 	return '<div class="alert alert-'+style+' alert-dismissible" role="alert" style="display:none;position:fixed;' + position + ':0;left:0;width:100%;z-index:2001;margin:0;text-align:center;" id="bsalert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>'+msg+'</div>';
@@ -255,13 +255,13 @@ zk.bs.msg = function(options){
 	*5.popover
 	*/
 zk.bs.popoptions = {
-	animation 	: true,
-	container 	: 'body',
-	content		: 'content',
-	html		: true,
-	placement	: 'bottom',
-	title		: '',
-	trigger		: 'hover'//click | hover | focus | manual.
+	animation : true,
+	container : 'body',
+	content	: 'content',
+	html: true,
+	placement: 'bottom',
+	title: '',
+	trigger: 'hover'//click | hover | focus | manual.
 };
 
 $.fn.bspop= function(options){
