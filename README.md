@@ -1,5 +1,8 @@
 # zkjs
+轮子有很多，但是我喜欢用自己造的轮子~
+
 一些常用js的封装
+
 examples文件中有相关demo
 
 ####其中zk.bs是基于bootstrap的二次封装
