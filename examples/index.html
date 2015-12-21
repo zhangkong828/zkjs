@@ -5,44 +5,65 @@
     <meta charset="utf-8"/>
     <script src="./jquery.min.js"></script>
     <script src="./bootstrap.min.js"></script>
-	  <script src="./zk.min2.js"></script>
+	  <script src="./zk.js"></script>
     <link href="./bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
  <div> 
-        <button type="button" class="btn btn-primary" onclick="testalert()">测试alert</button>
-        <button type="button" id='btn2'   class="btn btn-warning" onclick="testconfirm()">测试confirm</button>
-         <button type="button" id='btn3'   class="btn btn-warning">测试popover</button>
+        <button type="button" class="btn btn-primary" onclick="testalert1()">测试alert</button>
+        <button type="button" class="btn btn-primary" onclick="testalert2()">测试alert无按钮</button>
+        <button type="button" class="btn btn-success" onclick="testconfirm1()">测试confirm</button>
+        <button type="button" id='btn1'   class="btn btn-warning">hover触发popover</button>
+        <button type="button" id='btn2'   class="btn btn-warning">click触发popover</button>
+        <button type="button"  class="btn btn-info" onclick="testmsg()">测试msg</button>
     </div>
     <script type="text/javascript">
 $(function () {
   
-  $('#btn3').bspop({
-      title:'ttt',
-      content:'qwe',
-      placement:'bottom',
-      trigger:'hover'
+  $('#btn1').bspop({
+      title:'这里是popover标题1',
+      content:'这里是popover内容1',
+      placement:'bottom',//方向 下
+      trigger:'hover'//触发方式 hover
+  });
+   $('#btn2').bspop({
+      title:'这里是popover标题2',
+      content:'这里是popover内容2',
+      placement:'bottom',//方向 下
+      trigger:'click'//click
   });
   
-  
-  
 })
-      function testalert() {
-       zk.bs.alert('ss');
-    }
+      function testalert1() {
+       zk.bs.alert('alert内容');
+      }
+    function testalert2() {
+       zk.bs.alert({
+         title:'这里是alert标题',
+         msg:'这里是alert内容',
+         foot:false
+       });
+      }
 
-
-    function testconfirm() {
+    function testconfirm1() {
       zk.bs.confirm({
-          title:'11',
-          msg:'22'
+          title:'111',
+          msg:'222'
       },function(){
-         console.log('ok');
+        alert('按下ok');
        },function(){
-          console.log('cancel');
+         alert('按下cancel');
        });
     }
-
+    
+    function testmsg() {
+      zk.bs.msg({
+          msg:'msg',
+          position:'bottom',//位置
+          style:'success',//颜色  default  primary success info warning danger
+          time:2000//毫秒 多长时间后自动消失
+      });
+    }
 
 
 </script>
