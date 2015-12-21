@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <script src="./jquery.min.js"></script>
+    <script src="./bootstrap.min.js"></script>
+	  <script src="./zk.min2.js"></script>
+    <link href="./bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+ <div> 
+        <button type="button" class="btn btn-primary" onclick="testalert()">测试alert</button>
+        <button type="button" id='btn2'   class="btn btn-warning" onclick="testconfirm()">测试confirm</button>
+         <button type="button" id='btn3'   class="btn btn-warning">测试popover</button>
+    </div>
+    <script type="text/javascript">
+$(function () {
+  
+  $('#btn3').bspop({
+      title:'ttt',
+      content:'qwe',
+      placement:'bottom',
+      trigger:'hover'
+  });
+  
+  
+  
+})
+      function testalert() {
+       zk.bs.alert('ss');
+    }
+
+
+    function testconfirm() {
+      zk.bs.confirm({
+          title:'11',
+          msg:'22'
+      },function(){
+         console.log('ok');
+       },function(){
+          console.log('cancel');
+       });
+    }
+
+
+
+</script>
+</body>
+</html>
