@@ -33,7 +33,7 @@ zk.cookie = function(key, value){
 };
 
 /**
- * zk.bs
+ * zk.base.js
  * 1.alert
  * 2.confirm
  * 3.dialog
@@ -225,10 +225,10 @@ zk.bs.dialog = function(options, okcallback){
  *4.msg
  */
 zk.bs.msgoptions = {
-	msg  : 'msg', //内容
-	style : 'info',//颜色  default  primary success info warning danger
-	time : 2000,//毫秒 多长时间后自动消失
-	position : 'top',//位置  top bottom
+	msg  : 'msg',
+	style : 'info',
+	time : 2000,
+	position : 'top',
 };
 zk.bs.msgstr = function(msg, style, position){
 	return '<div class="alert alert-'+style+' alert-dismissible" role="alert" style="display:none;position:fixed;' + position + ':0;left:0;width:100%;z-index:2001;margin:0;text-align:center;" id="bsalert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>'+msg+'</div>';
